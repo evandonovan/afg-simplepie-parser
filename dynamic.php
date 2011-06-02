@@ -29,9 +29,10 @@ $feed = afg_parser_init($feed_url);
 	  $(".item-afg-info-title").click(function(){
 		  $(this).next(".item-afg-info-data").slideToggle(250);
 	  });
-		$(".show-all-afg").click(function(){
-		  $(".item-afg-info-data").show();
-		}
+		$("#toggle-afg-info").click(function(){
+		  $(".item-afg-info-data").toggle();
+			return false;
+		});
   });
   </script>
 </head>
@@ -50,7 +51,10 @@ $feed = afg_parser_init($feed_url);
 			  echo '<li><strong>' . $key . ':</strong> ' . $value;
 			}?>
 			</ul>
-	</div>
+	  </div>
+		<div class="afg-info-display-control">
+		  <p><a href="#" id="toggle-afg-info">Show/Hide AFG Info?</a></p>
+		</div>
 	</div>
  
 	<?php
