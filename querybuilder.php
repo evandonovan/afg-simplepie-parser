@@ -55,7 +55,7 @@
 <div class="form-element"><label for="timeperiod">Time Period (timeperiod):</label> <input type="text" size="60" name="timeperiod" id="timeperiod" /></div>
 <div class="form-element"><label for="vol_dist">Maximum Distance from Center Point (vol_dist):</label> <input type="text" size="60" name="vol_dist" id="vol_dist" /></div>
 <div class="form-element"><label for="vol_loc">Query Center Point (vol_loc):</label> <input type="text" size="60" name="vol_loc" id="vol_loc" /></div>
-<div class="form-element"><label for="vol_startdate">Opportunity Start Date (vol_startdate):</label> <input type="text" size="60" name="start" id="start" /></div>
+<div class="form-element"><label for="vol_startdate">Opportunity Start Date (vol_startdate):</label> <input type="text" size="60" name="vol_startdate" id="vol_startdate" /></div>
 <div class="form-element"><label for="vol_enddate">Opportunity End Date (vol_enddate):</label> <input type="text" size="60" name="vol_enddate" id="vol_enddate" /></div>
 <div class="form-element"><label for="overfetch">Ratio of Results from Backend (overfetch):</label> <input type="text" size="60" name="overfetch" id="overfetch" /></div>
 <div class="form-element" id="form-submit"><label for="merge">Merge/Dedupe Results?</label><input type="checkbox" name="merge" value="1" checked /></div>
