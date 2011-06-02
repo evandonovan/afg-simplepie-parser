@@ -23,12 +23,14 @@
   </ul>
 <p><small>Source: <a href="http://code.google.com/apis/gdata/docs/2.0/reference.html#Queries">Google Data Protocol Reference</a></small>, with additions based on example provided by Dan Stryker of AllForGood</p>
 <h2>Example Query</h2>
+<p>The following parameters:</p>
 <ul>
   <li><strong>q:</strong> -detailurl:volunteermatch AND -detailurl:christianvolunteering AND -detailurl:churchvolunteering AND (christian OR jesus OR catholic OR ministry) </li>
   <li><strong>num:</strong> 500</li>
   <li><strong>vol_dist:</strong> 500</li>
   <li><strong>vol_loc:</strong> Boston,MA</li>
 </ul>
+<p>would run <code>http://www.allforgood.org/api/volopps?key=christianvolunteering&output=rss&q=-detailurl%3Avolunteermatch%20AND%20-detailurl%3Achristianvolunteering%20AND%20-detailurl%3Achurchvolunteering%20AND%20%28christian%20OR%20jesus%20OR%20catholic%20OR%20ministry%29%20&num=500&vol_dist=500&vol_loc=Boston%2CMA</code></p>
 <div id="all-for-good-query-form">
 <form method="post" action="dynamic.php">
 <div class="form-element"><label for="q">Query (q):</label> <input type="text" size="60" name="q" id="q" /></div>

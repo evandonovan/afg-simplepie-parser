@@ -22,7 +22,7 @@ $feed = afg_parser_init();
 		<p><?php echo $feed->get_description(); ?></p>
 		<div class="query-information">
 		  <h2><strong>Query run:</strong></h2>
-		  <p><?php echo PARSER_QUERY; ?></p>
+		  <p><code><?php echo PARSER_QUERY; ?></code></p>
 			<h2>Query parameters</h2>
 		  <ul>
 			<?php $query = afg_get_query_parameters(); 
