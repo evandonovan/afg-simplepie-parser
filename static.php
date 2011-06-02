@@ -48,7 +48,7 @@ $feed = afg_parser_init();
 			<h2><a href="<?php echo $item->get_permalink(); ?>"><?php echo $item->get_title(); ?></a></h2>
 			<p><?php echo $item->get_description(); ?></p>
       <div class="item-afg-info">
-			  <h3><a href="#item-<?php echo $i; ?>"AllForGood Information</a></h3>
+			  <h3><a href="#item-<?php echo $i; ?>">AllForGood Information</a></h3>
 			  <?php foreach($fp as $tagname => $tag): ?>
 			    <p><strong><?php echo $tagname; ?>:</strong> <?php echo $tag[0]['data']; ?></p>
 			  <?php endforeach; ?>
