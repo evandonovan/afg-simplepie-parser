@@ -1,0 +1,57 @@
+	body {
+		font:12px/1.4em Verdana, sans-serif;
+		color:#333;
+		background-color:#fff;
+		width:700px;
+		margin:50px auto;
+		padding:0;
+	}
+  
+	div.header h2 {
+	 font-size: 1em;
+	}
+	 
+	a {
+		color:#326EA1;
+		text-decoration:underline;
+		padding:0 1px;
+	}
+ 
+	a:hover {
+		color:#333;
+		text-decoration:none;
+	}
+ 
+	div.header {
+		border-bottom:1px solid #999;
+	}
+ 
+	div.item {
+		padding:5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border:1px solid #999;
+	}
+  
+	div.query-information, div.item-afg-info {
+	  padding: 5px;
+		border: 1px solid #999;
+	}
+	
+	div.item-afg-info-title {
+	  border-bottom: 1px solid #999;
+	}
+	
+	div.form-element {
+	  margin-bottom: 10px;
+	}
+	
+	div.form-element input {
+	  clear: both;
+	  float: right;
+	}
+	
+	div#form-submit input {
+	  float: none;
+	}
+	

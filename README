@@ -1,0 +1,7 @@
+This is a simple example of a PHP-based parser for the AllForGood feed, using SimplePie.
+
+To use you must have SimplePie installed. The project was originally created with the assumption that it would be under a DocumentRoot in which Drupal was installed, and SimplePie would be part of Feeds module. However, you can change the path to SimplePie easily, in afg-simplepie.inc. 
+
+At that time, you may also want to change the API key, since it is currently using the ChristianVolunteering.org API key.
+
+Once you have the code modified for your use, and uploaded to a Web-accessible location, the best way to test is to visit /querybuilder.php.
