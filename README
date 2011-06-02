@@ -5,3 +5,7 @@ To use you must have SimplePie installed. The project was originally created wit
 At that time, you may also want to change the API key, since it is currently using the ChristianVolunteering.org API key.
 
 Once you have the code modified for your use, and uploaded to a Web-accessible location, the best way to test is to visit /querybuilder.php.
+
+Some of the code of this project is borrowed from the Drupal project.
+
+All code of Drupal is licensed under GPL 2.0, and this code is as well.
