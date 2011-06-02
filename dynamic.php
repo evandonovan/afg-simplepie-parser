@@ -29,6 +29,9 @@ $feed = afg_parser_init($feed_url);
 	  $(".item-afg-info-title").click(function(){
 		  $(this).next(".item-afg-info-data").slideToggle(250);
 	  });
+		$(".show-all-afg").click(function(){
+		  $(".item-afg-info-data").show();
+		}
   });
   </script>
 </head>
@@ -47,6 +50,7 @@ $feed = afg_parser_init($feed_url);
 			  echo '<li><strong>' . $key . ':</strong> ' . $value;
 			}?>
 			</ul>
+	</div>
 	</div>
  
 	<?php

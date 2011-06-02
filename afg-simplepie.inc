@@ -193,6 +193,9 @@ function afg_set_query_parameters() {
 		if(isset($_POST['vol_enddate']) && !empty($_POST['vol_enddate'])) {
 		  $query['vol_enddate'] = check_plain($_POST['vol_dist']);
 		}
+		if(isset($_POST['merge']) && $_POST['merge'] == 1) {
+		  $query['merge'] = 1;
+		}
 	}
 	
 	return $query;

@@ -47,6 +47,7 @@ $feed = afg_parser_init($feed_url);
 			}?>
 			</ul>
 	</div>
+	</div>
  
 	<?php
 	/**

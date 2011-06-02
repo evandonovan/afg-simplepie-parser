@@ -7,10 +7,10 @@
 		padding:0;
 	}
   
-	div.header h2 {
+	div.header h2, div.help-info-title h2 {
 	 font-size: 1em;
 	}
-	 
+	
 	a {
 		color:#326EA1;
 		text-decoration:underline;

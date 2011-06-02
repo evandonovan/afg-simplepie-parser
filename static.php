@@ -31,6 +31,7 @@ $feed = afg_parser_init();
 			}?>
 			</ul>
 	</div>
+	</div>
  
 	<?php
 	/**
