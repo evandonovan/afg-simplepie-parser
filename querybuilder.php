@@ -33,7 +33,7 @@
       <li>To exclude entries that match a given term, use the form <code>q=-term</code>.</li>
       <li>The search is case-insensitive.</li>
       <li>Example: to search for all entries that contain the exact phrase "Elizabeth Bennet" and the word "Darcy" but don't contain the word "Austen", use the following query: <code>?q="Elizabeth Bennet" Darcy -Austen</code></li>
-      <li>You can filter on particular fields by specifying the field name. For example, <code>-detailUrl: christianvolunteering</code> excludes results where the provider's source URL contains "christianvolunteering".</li>
+      <li>You can filter on particular fields by specifying the field name. For example, <code>-detailurl: christianvolunteering</code> excludes results where the provider's source URL contains "christianvolunteering". (Note: This appears to be case-sensitive.)</li>
 </ul>
 <p><small>Source: <a href="http://code.google.com/apis/gdata/docs/2.0/reference.html#Queries">Google Data Protocol Reference</a></small>, with additions based on example provided by Dan Stryker of AllForGood</p>
 </div>
@@ -57,6 +57,7 @@
 <div class="form-element"><label for="vol_loc">Query Center Point (vol_loc):</label> <input type="text" size="60" name="vol_loc" id="vol_loc" /></div>
 <div class="form-element"><label for="vol_startdate">Opportunity Start Date (vol_startdate):</label> <input type="text" size="60" name="start" id="start" /></div>
 <div class="form-element"><label for="vol_enddate">Opportunity End Date (vol_enddate):</label> <input type="text" size="60" name="vol_enddate" id="vol_enddate" /></div>
+<div class="form-element"><label for="overfetch">Ratio of Results from Backend (overfetch):</label> <input type="text" size="60" name="overfetch" id="overfetch" /></div>
 <div class="form-element" id="form-submit"><label for="merge">Merge/Dedupe Results?</label><input type="checkbox" name="merge" value="1" checked /></div>
 <div class="form-element" id="form-submit"><input type="submit" value="Search" name="submit"></div>
 </form>

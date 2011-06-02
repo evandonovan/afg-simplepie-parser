@@ -51,6 +51,8 @@ $feed = afg_parser_init($feed_url);
 			  echo '<li><strong>' . $key . ':</strong> ' . $value;
 			}?>
 			</ul>
+			<h2>Number of items returned:</h2>
+			<?php echo $feed->get_item_quantity(); ?>
 	  </div>
 		<div class="afg-info-display-control">
 		  <p><a href="#" id="toggle-afg-info">Show/Hide AFG Info?</a></p>
