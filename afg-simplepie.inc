@@ -193,6 +193,12 @@ function afg_set_query_parameters() {
 		if(isset($_POST['vol_enddate']) && !empty($_POST['vol_enddate'])) {
 		  $query['vol_enddate'] = check_plain($_POST['vol_dist']);
 		}
+		if(isset($_POST['type']) && !empty($_POST['type'])) {
+		  $query['type'] = check_plain($_POST['type']);
+		}
+		if(isset($_POST['category']) && !empty($_POST['category'])) {
+		  $query['category'] = check_plain($_POST['category']);
+		}
 		if(isset($_POST['overfetch']) && !empty($_POST['overfetch'])) {
 		  $query['overfetch'] = check_plain($_POST['overfetch']);
 		}
