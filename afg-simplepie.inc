@@ -164,7 +164,7 @@ function afg_get_query_parameters($feed_url = '') {
 
 function afg_set_query_parameters() {
   $query = array('key' => 'christianvolunteering', 'output' => 'rss');	               
-								 
+
   if(isset($_POST)) {
 	  if(isset($_POST['q']) && !empty($_POST['q'])) {
 		  $query['q'] = check_plain($_POST['q']);
