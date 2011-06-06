@@ -206,7 +206,6 @@ function afg_set_query_parameters() {
 		  $query['merge'] = 1;
 		}
 	}
-	print_r($query);
 	return $query;
 }
 
