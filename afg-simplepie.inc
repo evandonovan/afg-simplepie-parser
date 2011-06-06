@@ -140,9 +140,9 @@ function drupal_http_build_query(array $query, $parent = '') {
   return implode('&', $params);
 }
 
-// Checks if text is safe to display or use in an HTTP request - from Drupal
+// Checks if text is safe to display or use in an HTTP request - from Drupal (but not doing quotes)
 function check_plain($text) {
-  return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+  return htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
 }
 
 // Drupal's version of URL encode
@@ -206,7 +206,7 @@ function afg_set_query_parameters() {
 		  $query['merge'] = 1;
 		}
 	}
-	
+	print_r($query);
 	return $query;
 }
 
