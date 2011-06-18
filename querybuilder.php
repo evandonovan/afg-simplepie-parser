@@ -40,26 +40,31 @@
 <div class="help-info-title" id="help-2"><h2><a href="#help-2">Example Query</a></h2></div>
 <div class="help-info"><p>The following parameters:</p>
 <ul>
-  <li><strong>q:</strong> -detailurl:volunteermatch AND -detailurl:christianvolunteering AND -detailurl:churchvolunteering AND (christian OR jesus OR catholic OR ministry) </li>
-  <li><strong>num:</strong> 500</li>
-  <li><strong>vol_dist:</strong> 500</li>
-  <li><strong>vol_loc:</strong> Boston,MA</li>
+  <li><strong>q:</strong> -detailurl:christianvolunteering AND -detailurl:churchvolunteering AND (christian OR jesus OR catholic OR ministry) </li>
+  <li><strong>num:</strong> 100</li>
+	<li><strong>vol_loc:</strong> Boston,MA</li>
+  <li><strong>vol_dist:</strong> 100</li>  
 </ul>
-<p>would run <code>http://www.allforgood.org/api/volopps?key=christianvolunteering&output=rss&q=-detailurl%3Avolunteermatch%20AND%20-detailurl%3Achristianvolunteering%20AND%20-detailurl%3Achurchvolunteering%20AND%20%28christian%20OR%20jesus%20OR%20catholic%20OR%20ministry%29%20&num=500&vol_dist=500&vol_loc=Boston%2CMA</code></p></div>
+<p>would run <code>http://www.allforgood.org/api/volopps?key=christianvolunteering&output=rss&q=-detailurl%3Achristianvolunteering%20AND%20-detailurl%3Achurchvolunteering%20AND%20%28christian%20OR%20jesus%20OR%20catholic%20OR%20ministry%29%20&num=100&vol_dist=100&vol_loc=Boston%2CMA</code></p>
+<h3>Notes</h3>
+<ul><li>The maximum number that can be returned currently without an offset is 100, and the distance seems to perform best when not greater than about 100 (miles).</li>
+<li>You can't pass the "lat" and "long" parameters in directly, but you can pass a comma-delimited latitude, longitude to "vol_loc" and it will be parsed.</li></ul>
+</div>
 <div id="all-for-good-query-form">
 <form method="post" action="dynamic.php">
 <div class="form-element"><label for="q">Query (q):</label> <input type="text" size="60" name="q" id="q" /></div>
 <div class="form-element"><label for="num">Number of Results (num):</label> <input type="text" size="60" name="num" id="num" /></div>
 <div class="form-element"><label for="start">Offset (start):</label> <input type="text" size="60" name="start" id="start" /></div>
-<div class="form-element"><label for="provider">Provider (provider):</label> <input type="text" size="60" name="provider" id="provider" /></div>
-<div class="form-element"><label for="timeperiod">Time Period (timeperiod):</label> <input type="text" size="60" name="timeperiod" id="timeperiod" /></div>
-<div class="form-element"><label for="vol_dist">Maximum Distance from Center Pt (vol_dist):</label> <input type="text" size="60" name="vol_dist" id="vol_dist" /></div>
 <div class="form-element"><label for="vol_loc">Query Center Point (vol_loc):</label> <input type="text" size="60" name="vol_loc" id="vol_loc" /></div>
-<div class="form-element"><label for="vol_startdate">Opportunity Start Date (vol_startdate):</label> <input type="text" size="60" name="vol_startdate" id="vol_startdate" /></div>
-<div class="form-element"><label for="vol_enddate">Opportunity End Date (vol_enddate):</label> <input type="text" size="60" name="vol_enddate" id="vol_enddate" /></div>
+<div class="form-element"><label for="vol_dist">Maximum Distance from Center Pt (vol_dist):</label> <input type="text" size="60" name="vol_dist" id="vol_dist" /></div>
 <div class="form-element"><label for="type">Opportunity Type (type):</label> <input type="text" size="60" name="type" id="type" /></div>
 <div class="form-element"><label for="category">Opportunity Categories (category):</label> <input type="text" size="60" name="category" id="category" /></div>
-<div class="form-element"><label for="overfetch">Ratio of Results from Backend (overfetch):</label> <input type="text" size="60" name="overfetch" id="overfetch" /></div>
+<div class="form-element"><label for="provider">Provider (provider):</label> <input type="text" size="60" name="provider" id="provider" /></div>
+<div class="form-element"><label for="timeperiod">Time Period (timeperiod):</label> <input type="text" size="60" name="timeperiod" id="timeperiod" /></div>
+<div class="form-element"><label for="vol_startdate">Opportunity Start Date (vol_startdate):</label> <input type="text" size="60" name="vol_startdate" id="vol_startdate" /></div>
+<div class="form-element"><label for="vol_enddate">Opportunity End Date (vol_enddate):</label> <input type="text" size="60" name="vol_enddate" id="vol_enddate" /></div>
+
+<!--<div class="form-element"><label for="overfetch">Ratio of Results from Backend (overfetch):</label> <input type="text" size="60" name="overfetch" id="overfetch" /></div>-->
 <div class="form-element" id="form-submit"><label for="merge">Merge/Dedupe Results?</label><input type="checkbox" name="merge" value="1" checked /></div>
 <div class="form-element" id="form-submit"><input type="submit" value="Search" name="submit"></div>
 </form>
