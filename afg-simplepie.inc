@@ -19,8 +19,11 @@ function afg_parser_init($feed_url = '') {
 
   // Disable the SimplePie cache. (We want to re-run this query each time.)
   $feed->enable_cache(FALSE);
+	
+	// Make the parser as fast as possible.
+	$feed->set_stupidly_fast(TRUE);
 
-  // Change the cache location to a writable one
+  // Change the cache location to a writable one (@todo: required if cache is off?)
   $feed->set_cache_location('../tmp');
  
   // Set which feed to process.
@@ -162,9 +165,24 @@ function afg_get_query_parameters($feed_url = '') {
 	return $filtered_query;
 }
 
-function afg_set_query_parameters() {
+function afg_set_query_parameters($extra_params = array()) {
+  // set default parameters for all queries
   $query = array('key' => 'christianvolunteering', 'output' => 'rss');	               
-
+  
+	// merge in extra parameters if they are being set programmatically (i.e., not in $_POST)
+	if(isset($extra_params) && count($extra_params) >= 0) {
+	  if(!isset($extra_params['q'])) {
+		  $extra_params['q'] = '-detailurl:christianvolunteering AND -detailurl:churchvolunteering AND (christian OR jesus OR catholic OR ministry)';
+		}
+	  if(!isset($extra_params['num'])) { 
+		  $extra_params['num'] = 100;
+		}
+		if(!isset($extra_params['vol_dist'])) {
+		  $extra_params['vol_dist'] = 100;
+		}
+	  $query = array_merge($query, $extra_params);
+	}
+	
   if(isset($_POST)) {
 	  if(isset($_POST['q']) && !empty($_POST['q'])) {
 		  $query['q'] = check_plain($_POST['q']);
@@ -184,6 +202,7 @@ function afg_set_query_parameters() {
 		if(isset($_POST['vol_dist']) && !empty($_POST['vol_dist'])) {
 		  $query['vol_dist'] = check_plain($_POST['vol_dist']);
 		}
+		// Note: Can't call lat or long directly; have to pass a comma-delimited string into the vol_loc parameter
 		if(isset($_POST['vol_loc']) && !empty($_POST['vol_loc'])) {
 		  $query['vol_loc'] = check_plain($_POST['vol_loc']);
 		}
@@ -209,8 +228,8 @@ function afg_set_query_parameters() {
 	return $query;
 }
 
-function afg_set_feed_url() {
-  $query = afg_set_query_parameters();
+function afg_set_feed_url($params = array()) {
+  $query = afg_set_query_parameters($params);
 	$query_string = drupal_http_build_query($query);
 	$feed_url = 'http://www.allforgood.org/api/volopps?' . $query_string;
   return $feed_url;
